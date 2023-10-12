@@ -208,6 +208,31 @@
 					"response": []
 				},
 				{
+					"name": "getCocktailByGlass",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/cocktaillss/Champagne Flute",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"cocktaillss",
+								"Champagne Flute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "createCocktail",
 					"request": {
 						"method": "POST",
