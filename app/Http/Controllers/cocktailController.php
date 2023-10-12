@@ -192,4 +192,23 @@ class cocktailController extends Controller
             'results' => $cocktails
         ]);
     }
+
+    public function getCocktailByGlass($glass) {
+        $cocktails = Cocktail::with('ingredients')->where('glass', $glass)->get();
+    
+        if (!$cocktails) {
+            abort(response()->json([
+                'message' => 'Cocktails not Found!',
+                'status' => 'NOT FOUND',
+                'code' => 404
+            ], 404));
+        }
+    
+        return response()->json([
+            'message' => 'Cocktails Displayed Successfully!',
+            'status' => 'OK',
+            'code' => '200',
+            'results' => $cocktails
+        ]);
+    }
 }
