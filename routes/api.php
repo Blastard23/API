@@ -34,6 +34,7 @@ Route::get('/category', [cocktailController::class, 'category']);
 Route::get('/glass', [cocktailController::class, 'glass']);
 Route::get('/alcohol', [cocktailController::class, 'alcohol']);
 Route::get('/latest', [cocktailController::class, 'getLatestCocktails']);
+Route::get('/popular', [cocktailController::class, 'getPopularCocktail']);
 
 Route::get('/cocktailImage/{filename}', [cocktailController::class, 'fileCocktailImage']);
 

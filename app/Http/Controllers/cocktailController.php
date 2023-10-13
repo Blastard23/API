@@ -273,4 +273,16 @@ class cocktailController extends Controller
             'results' => $cocktails,
         ]);
     }
+
+    public function getPopularCocktail(){
+        $popularCocktail = Cocktail::where('popular', 1)->get();
+    
+        return response()->json([
+            'message' => 'Popular cocktail retrieved successfully',
+            'code' => 200,
+            'status' => 'OK',
+            'line' => "line " . __LINE__ . " " . basename(__LINE__),
+            'results' => $popularCocktail,
+        ]);
+    }
 }
