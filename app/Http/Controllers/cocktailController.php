@@ -259,4 +259,18 @@ class cocktailController extends Controller
             'results' => $alcoholic,
         ]);
     }
+
+    public function getLatestCocktails(){
+        $cocktails = Cocktail::orderBy('created_at', 'desc')
+                            ->take(2)
+                            ->get();
+    
+        return response()->json([
+            'message' => 'Latest cocktails displayed successfully',
+            'code' => 200,
+            'status' => 'OK',
+            'line' => "line " . __LINE__ . " " . basename(__LINE__),
+            'results' => $cocktails,
+        ]);
+    }
 }
