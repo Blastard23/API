@@ -34,6 +34,78 @@
 					"response": []
 				},
 				{
+					"name": "getAllCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/category",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllGlass",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/glass",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"glass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAlcohol",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/alcohol",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"alcohol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "getRandomCocktail",
 					"request": {
 						"method": "GET",
