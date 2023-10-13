@@ -106,6 +106,30 @@
 					"response": []
 				},
 				{
+					"name": "getLatestCocktail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/latest",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "getRandomCocktail",
 					"request": {
 						"method": "GET",
