@@ -130,6 +130,30 @@
 					"response": []
 				},
 				{
+					"name": "getPopularCocktail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostURL}}/api/popular",
+							"host": [
+								"{{hostURL}}"
+							],
+							"path": [
+								"api",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "getRandomCocktail",
 					"request": {
 						"method": "GET",
