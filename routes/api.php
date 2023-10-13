@@ -30,6 +30,9 @@ Route::get('/rands', [cocktailController::class, 'TenRandomCocktails']);
 Route::get('/cocktails/{alcoholType}', [cocktailController::class, 'getCocktailByAlcoholType']);
 Route::get('/cocktaills/{category}', [cocktailController::class, 'getCocktailByCategory']);
 Route::get('/cocktaillss/{category}', [cocktailController::class, 'getCocktailByGlass']);
+Route::get('/category', [cocktailController::class, 'category']);
+Route::get('/glass', [cocktailController::class, 'glass']);
+Route::get('/alcohol', [cocktailController::class, 'alcohol']);
 
 Route::get('/cocktailImage/{filename}', [cocktailController::class, 'fileCocktailImage']);
 

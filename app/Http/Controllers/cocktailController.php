@@ -211,4 +211,52 @@ class cocktailController extends Controller
             'results' => $cocktails
         ]);
     }
+
+    public function category(){
+        $categories = Cocktail::distinct()->pluck('category')->all();
+
+        $categories = array_filter($categories, function ($category) {
+            return !is_null($category);
+        });
+
+        return response()->json([
+            'message' => 'Cocktail categories displayed successfully',
+            'code' => 200,
+            'status' => 'OK',
+            'line' => "line" . __LINE__ . "" . basename(__LINE__),
+            'results' => $categories,
+        ]);
+    }
+
+    public function glass(){
+        $glasses = Cocktail::distinct()->pluck('glass')->all();
+
+        $glasses = array_filter($glasses, function ($glass) {
+            return !is_null($glass);
+        });
+
+        return response()->json([
+            'message' => 'Cocktail glasses displayed successfully',
+            'code' => 200,
+            'status' => 'OK',
+            'line' => "line" . __LINE__ . "" . basename(__LINE__),
+            'results' => $glasses,
+        ]);
+    }
+
+    public function alcohol(){
+        $alcoholic = Cocktail::distinct()->pluck('alcohol')->all();
+
+        $alcoholic = array_filter($alcoholic, function ($alcohol) {
+            return !is_null($alcohol);
+        });
+
+        return response()->json([
+            'message' => 'Cocktail glasses displayed successfully',
+            'code' => 200,
+            'status' => 'OK',
+            'line' => "line" . __LINE__ . "" . basename(__LINE__),
+            'results' => $alcoholic,
+        ]);
+    }
 }
