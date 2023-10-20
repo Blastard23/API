@@ -139,6 +139,11 @@ class cocktailController extends Controller
     public function TenRandomCocktails(){
         $cocktails = Cocktail::with('ingredients')->inRandomOrder()->take(10)->get();
 
+        // $cocktails = Cocktail::with('ingredients')
+        //     ->orderBy('column_name', 'desc')
+        //     ->take(10)
+        //     ->get();
+
         return response()->json([
             'message' => '10 random cocktails displayed successfully',
             'code' => 200,
